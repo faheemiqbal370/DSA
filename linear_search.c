@@ -14,7 +14,11 @@ int main()
     int arr[]={1,3,4,56,3,54,666,454,34};
     int size=sizeof(arr)/sizeof(int); //to get size of array
     int element=4;
-    int searchindex=linearsearch(arr,size,4);
-    printf("The element %d was found at index %d \n",element,searchindex);
+    int searchindex=linearsearch(arr,size,element);
+     if (searchindex != -1) {
+        printf("The element %d was found at index %d.\n", element, searchindex);
+    } else {
+        printf("The element %d was not found in the array.\n", element);
+    }
     
 }
